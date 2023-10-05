@@ -1,0 +1,538 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+/*
+font-family: 'Dancing Script', cursive;
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    /* background: url('../images/bg.png') repeat top left; */
+    background: #222;
+    font-family: 'Lato', sans-serif;
+}
+
+
+.hide{
+    display: none !important;
+}
+
+.content-candidatos{
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.content-candidatos ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1.5rem 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.content-candidatos ul li{
+    display: flex;
+}
+
+.content-candidatos ul li .foto{
+    width: 70px;  
+    margin-right: 1rem;
+}
+
+.content-candidatos ul li .foto img{
+    width: 100%;
+    height: 12vh; 
+    border-radius: 50px;
+    object-fit: cover;
+}
+
+.content-candidatos ul li .info{
+    display: flex;
+    flex-direction: row;
+    color: #FFF;
+    font-size: 1rem;
+}
+
+.content-candidatos ul li .info div{
+    margin-bottom: 0.3rem;
+}
+
+.content-candidatos ul li .info div strong{
+    font-size: 1rem;
+    font-weight: normal;
+    display: inline-block;
+}
+
+.content-candidatos ul li .info div span{
+    font-size: 14px;
+}
+
+.content-candidatos ul li .info .infNumero span{
+    padding: 5px 6px;
+    border-radius: 4px;
+}
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#container-urna{
+    width: 75vw;
+    height: 80vh;
+    margin: 6rem auto;
+    background: #EDEDEB;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+#container-urna:before,
+#container-urna:after{
+    content: '';
+    position: absolute;
+    width: 15%;
+    height: 100%;
+    top: 0;
+    z-index: -1;
+    background: #EDEDEB;   
+}
+
+#container-urna:before{
+    left: -2%;
+    transform: skewX(-4deg);
+    border-radius: 0 0 0 10px;
+}
+
+#container-urna:after{
+    right: -2%;
+    transform: skewX(4deg);
+    border-radius: 0 0 10px 0;
+}
+
+.urna-feature:before{
+    content: '';
+    position: absolute;
+    top: -112px;
+    left: 54px;
+    transform: skewX(-57deg) rotatex(120deg);
+    background: #EDEDEB;
+    width: 60%;
+    height: 150px;
+}
+
+.urna-feature:after{
+    content: '';
+    position: absolute;
+    top: -112px;
+    right: 54px;
+    transform: skewX(57deg) rotatex(-120deg);
+    background: #EDEDEB;
+    width: 60%;
+    height: 150px;
+}
+
+
+
+/*AREA DOS CANDIDATOS*/
+#col-dados{
+    width: 40vw;
+    min-height: 330px;
+    background-color: #f8f7f7;
+    /* border-top: 10px solid #555;
+    border-right: 10px solid #555;
+    border-bottom: 10px solid #555; */
+    border: 10px solid #555;
+    position: relative;
+    padding: 1.2rem;
+    overflow: hidden;
+}
+
+#col-dados section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    min-height: 270px;
+    font-size: 6rem;
+    font-weight: normal;
+}
+
+#col-dados section div{
+    font-size: 1.2rem;
+}
+
+#col-dados section .votou{
+    font-size: 3rem;
+}
+
+#col-dados small{
+    font-size: 2.5rem;
+    font-weight: normal;
+    text-align: center;
+    display: block;
+    margin-bottom: 2rem;
+    height: auto;
+}
+
+#col-dados .votou-em-branco{
+    font-size: 2.5rem;
+    min-height: 120px;
+    margin-bottom: 2rem;
+}
+
+/* #col-dados:before{
+    content: '';
+    position: absolute;
+    width: 5%;
+    height: 100%;
+    top: -10px;
+    z-index: -1;
+    background: #f8f7f7;
+    left: -4%;
+    transform: skewX(-3deg);
+    border: 10px solid #555;
+} */
+
+.container-information{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.container-information .col-dados-information h1{
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.container-information .col-dados-information h2{
+    font-size: 2rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-left: 5rem;
+    margin-bottom: 0.5rem;
+}
+
+.container-information .col-dados-information h3{
+    font-weight: normal;
+    font-size: 1rem;
+    margin-block: 0.3rem;
+    width: 81px;
+}
+
+.container-information .col-dados-information .info{
+    display: flex;
+    align-items: center;
+}
+
+
+
+.container-information .col-dados-information .info h3{
+    margin-right: 1rem;
+    width: 62px;
+}
+
+.container-information .col-dados-information .numberCandidato .number{
+    background-color: #CCC;
+    margin: 0.2rem;
+    font-size: 1rem;
+    padding: 0.6rem;
+    width: 30px;
+    height: 40px;
+}
+
+.container-information .col-dados-information .numberCandidato .number.focus {
+    border:1px solid #9b8484;
+    opacity: 1;
+}
+
+.container-information .col-dados-information #contentText{
+    display: flex;
+    flex-direction: column;
+}
+
+.container-information .col-dados-information #contentText span{
+    display: flex;
+    align-items: center;
+}
+
+@keyframes anima {
+    to {
+        opacity: 0;
+    }
+}
+.focus {
+    animation: anima 1200ms ease infinite;
+}
+
+.col-dados-extras > span{
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.col-dados-foto{
+    background: #CCC;
+    width: 12vw;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col-dados-extras.bx{
+    border-top: 1px solid #333;
+    padding-top: 2rem;
+}
+
+.col-dados-extras .text{
+    margin-bottom: 0.5rem;
+}
+
+.col-dados-extras strong{
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.col-dados-extras .text span:first-child{
+    width: 130px;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+
+/*AREA DO VOTO*/
+
+#col-votacao{
+    width: 25vw;
+    /* height: 62vh; */
+    position: relative;  
+}
+
+#col-votacao .title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f7f7;
+    padding-block: 0.5rem;
+}
+
+#col-votacao .title .icon{
+    width: 45px;
+    display: block;
+    margin-right: 1rem;
+}
+
+#col-votacao .title img{
+    width: 100%;
+}
+
+#col-votacao .title h2{
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+}
+
+#col-votacao .votacao{
+    background: #333;
+    width: 100%;
+    padding-bottom: 0.8rem;
+}
+
+#col-votacao .votacao .buttons{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    padding-block: 1rem;
+}
+
+#col-votacao button{
+    margin: 0.5rem;
+}
+
+#col-votacao .votacao .buttons button{
+    width: 65px;
+    height: 45px;
+    background-color: #222;
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: -4px 4px 4px #111;
+    border: 0; 
+}
+
+#col-votacao .votacao .buttons button:after{
+    content:'';
+    display: block;
+    
+    width: 35px;
+    height: 35px;
+    opacity: 0.5;
+}
+
+#col-votacao .votacao .btns .btn.confirma:after,
+#col-votacao .votacao .btns .btn.corrige:after,
+#col-votacao .votacao .btns .btn.anular:after{
+    content:'';
+    display: block;
+    opacity: 0.5;
+    height: 20px;
+}
+
+#col-votacao .votacao .buttons button[data-id="1"]:after{ background: url('../images/um.png') no-repeat center 5px; background-size: 60%;}
+#col-votacao .votacao .buttons button[data-id="2"]:after{ background: url('../images/dois.png') no-repeat center 5px; background-size: 60%;}
+#col-votacao .votacao .buttons button[data-id="3"]:after{ background: url('../images/tres.png') no-repeat center 5px; background-size: 80%;}
+#col-votacao .votacao .buttons button[data-id="4"]:after{ background: url('../images/quatro.png') no-repeat center 5px; background-size: 80%;}
+#col-votacao .votacao .buttons button[data-id="5"]:after{ background: url('../images/cinco.png') no-repeat center 5px; background-size: 80%;}
+#col-votacao .votacao .buttons button[data-id="6"]:after{ background: url('../images/seis.png') no-repeat center 5px; background-size: 80%;}
+#col-votacao .votacao .buttons button[data-id="7"]:after{ background: url('../images/sete.png') no-repeat center 5px; background-size: 80%;}
+#col-votacao .votacao .buttons button[data-id="8"]:after{ background: url('../images/oito.png') no-repeat center 5px; background-size: 80%;}
+#col-votacao .votacao .buttons button[data-id="9"]:after{ background: url('../images/nove.png') no-repeat center 5px; background-size: 80%;}
+#col-votacao .votacao .buttons button[data-id="0"]:after{ background: url('../images/zero.png') no-repeat center 5px; background-size: 80%;}
+
+#col-votacao .votacao .btns .btn.confirma:after{ background: url('../images/confirma.png') no-repeat center 5px; background-size: 60%; }
+#col-votacao .votacao .btns .btn.corrige:after{ background: url('../images/corrige.png') no-repeat center 5px; background-size: 60%; }
+#col-votacao .votacao .btns .btn.anular:after{ background: url('../images/corrige.png') no-repeat center 5px; background-size: 60%; }
+
+
+#col-votacao .votacao .btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#col-votacao .votacao .btns .btn{
+    border: 0;
+    padding: 0.2rem 0.5rem;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+#col-votacao .votacao .btns .btn.anular{
+    background: rgb(255, 255, 255);
+    box-shadow: -2px 2px 0 rgb(0 16 0);
+}
+
+#col-votacao .votacao .btns .btn.corrige{
+    background: rgb(236, 4, 4);
+    box-shadow: -2px 2px 0 rgb(0 16 0);
+}
+
+#col-votacao .votacao .btns .btn.confirma{
+    background: rgb(6, 212, 6);
+    box-shadow: -2px 2px 0 rgb(0 16 0);
+}
+
+#col-votacao .votacao .btns .btn.selected{
+    padding: 0.8rem 1rem;
+}
+
+.info-corrige{
+    color: rgb(236, 4, 4);
+}
+
+.info-confirma{
+    color: rgb(6, 212, 6);
+}
+
+.loading{
+    display: none;
+    transform: scale(4);
+    z-index: 0;
+}
+
+.loading.is-loading{
+    display: block;
+    position: absolute;
+    z-index: 9;
+    background: #FFF;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin: 2rem 0 0 1rem;
+}
+.loading .c-loader {
+    animation: is-rotating 1s infinite;
+    border: 2px solid #e5e5e5;
+    border-radius: 50%;
+    border-top-color: #333;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    margin-left: -12px;
+}
+
+@keyframes animate {
+    100%{
+      transform: scaleX(1);
+    }
+  }
+
+@keyframes is-rotating {
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+.progress{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    min-height: 270px;
+}
+
+.progress > span{
+    text-align: center;
+    display: block;
+    margin: 1rem 0;
+}
+
+.barraProgress {
+    height: 25px;
+    background-color: #CCC;
+    position: relative;
+    border-radius: 50px;
+}
+.barraProgress .progress-bar{
+   position: absolute;
+   height: 100%;
+   background-color: #0fd439;
+   border-radius: 50px;
+   animation: progress-animation 2s infinite;
+}
+@keyframes progress-animation{
+    0% { width: 0%; } 
+    100% { width: 100%}
+}
+
+/*FOTO DO CANDIDATO*/
+.col-dados-foto img{
+    width: 100%;
+    height: 100%;
+}
+

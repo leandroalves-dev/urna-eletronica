@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo</title>
+    <link rel="icon" type="image/.png" sizes="16x16"  href="./images/favicon.png">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <section class="content-candidatos">
+        <ul class="listaCanditatos"></ul>
+    </section>
+
+    <section class="container">
+
+        <div id="container-urna">
+            <span class="urna-feature"></span>
+            <div id="col-dados">
+                <!-- <div class="loading">
+                    <div class="c-loader">            
+                    </div>
+                </div> -->
+                <div class="container-information">
+                    <div class="col-dados-information">
+                        <h1 class="hide">Seu voto para</h1>
+                        <h2 class="cargo"></h2>
+                        <!-- SPANS -->
+                        <div class="info numberCandidato"></div>
+                        <div id="contentText" class="hide">
+                            <span class="nomeCandidato">
+                               <h3>Nome: </h3>
+                               <strong></strong>
+                            </span>
+                            <span class="siglaPartido">
+                                <h3>Partido: </h3>
+                                <strong></strong>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-dados-foto hide">
+                        <img src="./images/img-1.jpg" title="">
+                    </div>
+                </div>
+               
+                <div class="col-dados-extras hide">
+                    <strong>Aperte a tecla: </strong> 
+                    <div class="text">
+                        <span class="info-confirma">Confirma</span>
+                        <span>Para CONFIRMAR este voto</span>
+                    </div>
+                    <div class="text">
+                        <span class="info-corrige">Corrige</span>
+                        <span>Para REINICIAR este voto</span>
+                    </div>
+                </div>
+                <div class="progress hide">
+                    <div class="barraProgress">
+                        <span class="progress-bar"></span>
+                    </div>
+                    <span>Gravando...</span>
+                </div>
+            </div>
+
+            <div id="col-votacao">
+                <div class="title">
+                    <span class="icon">
+                        <img src="./images/icon.png" alt="" />
+                    </span>
+                    <h2>Justiça Eleitoral</h2>
+                </div>
+                <div class="votacao">
+                    <div class="buttons">                        
+                        <button type="button" data-id="1" onclick="buttonClick(1)">1</button>
+                        <button type="button" data-id="2" onclick="buttonClick(2)">2</button>
+                        <button type="button" data-id="3" onclick="buttonClick(3)">3</button>
+                        <button type="button" data-id="4" onclick="buttonClick(4)">4</button>
+                        <button type="button" data-id="5" onclick="buttonClick(5)">5</button>
+                        <button type="button" data-id="6" onclick="buttonClick(6)">6</button>
+                        <button type="button" data-id="7" onclick="buttonClick(7)">7</button>
+                        <button type="button" data-id="8" onclick="buttonClick(8)">8</button>
+                        <button type="button" data-id="9" onclick="buttonClick(9)">9</button>
+                        <button type="button" data-id="0" onclick="buttonClick(0)">0</button>
+                    </div>
+                    <div class="btns">
+                        <button class="btn anular" id="anular">Branco</button>
+                        <button class="btn corrige" id="corrige">Corrige</button>
+                        <button class="btn confirma" id="confirma">Confirma</button>
+                    </div>
+                </div>
+                <div id="numbersClicks"></div>
+            </div>
+
+        </div>
+       
+    </section>
+
+    <!-- TEMPLATE VOTO -->
+
+    <div class="containerVoto hide"> 
+
+        
+
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
