@@ -4,7 +4,7 @@ const candidatura = [
         numeros: 5,
         candidatos: [
             {
-                numero: '11223',
+                numero: '10001',
                 nome: 'Fulano',
                 partido: 'ABC',
                 fotos: [
@@ -12,11 +12,11 @@ const candidatura = [
                 ]
                 },
                 {
-                numero: '11224',
+                numero: '10002',
                 nome: 'Beltrano',
                 partido: 'DEFG',
                 fotos: [
-                    {url: './images/img-1.jpg', legenda: 'Vereador'}
+                    {url: './images/img-2.jpg', legenda: 'Vereadora'}
                 ]
             },
         ]
@@ -26,7 +26,7 @@ const candidatura = [
         numeros: 4,
         candidatos: [
             {
-                numero: '2222',
+                numero: '1000',
                 nome: 'Fulano',
                 partido: 'ABC',
                 fotos: [
@@ -34,11 +34,11 @@ const candidatura = [
                 ]
                 },
                 {
-                numero: '3333',
+                numero: '2000',
                 nome: 'Beltrano',
                 partido: 'DEFG',
                 fotos: [
-                    {url: './images/img-1.jpg', legenda: 'Deputado'}
+                    {url: './images/img-2.jpg', legenda: 'Deputada'}
                 ]
             },
         ]
@@ -48,7 +48,7 @@ const candidatura = [
         numeros: 3,
         candidatos: [
             {
-                numero: '555',
+                numero: '123',
                 nome: 'Fulano',
                 partido: 'ABC',
                 fotos: [
@@ -56,11 +56,11 @@ const candidatura = [
                 ]
                 },
                 {
-                numero: '666',
+                numero: '321',
                 nome: 'Beltrano',
                 partido: 'DEFG',
                 fotos: [
-                    {url: './images/img-1.jpg', legenda: 'Senador'}
+                    {url: './images/img-2.jpg', legenda: 'Senadora'}
                 ]
             },
         ]
@@ -70,7 +70,7 @@ const candidatura = [
         numeros: 2,
         candidatos: [
             {
-                numero: '20',
+                numero: '10',
                 nome: 'Ciclano',
                 partido: 'ERD',
                 fotos: [
@@ -78,11 +78,11 @@ const candidatura = [
                 ]
                 },
                 {
-                numero: '30',
+                numero: '20',
                 nome: 'Beltrano',
                 partido: 'OLM',
                 fotos: [
-                    {url: './images/img-1.jpg', legenda: 'Vereador'}
+                    {url: './images/img-2.jpg', legenda: 'Vereadora'}
                 ]
             },
         ]
@@ -92,7 +92,7 @@ const candidatura = [
         numeros: 2,
         candidatos: [
             {
-                numero: '13',
+                numero: '10',
                 nome: 'Ciclano',
                 partido: 'ERD',
                 fotos: [
@@ -100,11 +100,11 @@ const candidatura = [
                 ]
                 },
                 {
-                numero: '12',
+                numero: '11',
                 nome: 'Beltrano',
                 partido: 'OLM',
                 fotos: [
-                    {url: './images/img-1.jpg', legenda: 'Presidente'}
+                    {url: './images/img-2.jpg', legenda: 'Presidenta'}
                 ]
             },
         ]
@@ -161,7 +161,7 @@ function processInit() {
         let html = `
             <li>
                 <div class="info">
-                    <div class="infNumero"><strong>Numero:</strong> <span>${items.numero}</span></div>
+                    <div class="infNumero"><span>Candidato a ${items.fotos[0].legenda}: ${items.numero}</span></div>
                 </div>                
             </li>
         `;
@@ -208,7 +208,6 @@ function buttonClick(num){
         }
         
     }
-
 
     const todosPreenchidos = Array.from(numberCandidato.querySelectorAll("span")).every(span => span.innerHTML !== "");
 
